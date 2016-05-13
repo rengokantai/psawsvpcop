@@ -45,3 +45,9 @@ vpc2:cidr 172.1.0.0/16
 ######3 update routing table (1:20)
 Add to first VPC's public subnet. destination:vpc2CIDR  target: pcx 
 Add to second VPC's public subnet. destination:vpc1CIDR  target: pcx 
+
+#####9
+######4 configuring aws vpn
+customer gateways->create->routing(static)->ip address  
+create vpG->attach to vpc 10.0.0.0/16  
+vpn connections->routing options(static)->static ip prefixes(10.1.0.0/16)
